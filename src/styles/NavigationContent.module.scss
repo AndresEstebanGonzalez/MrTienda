@@ -1,0 +1,93 @@
+@use "../assets/variables/colors.scss";
+
+// Mobile First
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100dvw;
+
+    .topContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 2rem 0;
+
+        .topContainerTitle{
+            font-size: 3rem;
+            color: colors.$dark-grey;
+        }
+        .coverImg{
+            width: 70vw;
+        }
+    }
+
+    .bottomContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 1.7rem 1rem;
+
+        .soporteBtn{
+            display: flex;
+            align-items: center;
+            width: 70vw;
+            margin: 1rem 0;
+            padding: 1.1rem 0;
+            border-radius: 1rem;
+            border: solid (colors.$light-grey);
+            background-color: colors.$white;
+
+            .btnLogo{
+                width: 9vw;
+                margin: 0 3rem;
+            }
+            .btnTitle{
+                padding-right: 1.5rem;
+                word-wrap: break-word;
+                color: colors.$dark-grey;
+                font-size: 1.5rem;
+            }
+        }
+        .soporteBtn:hover {
+            background-color: colors.$yellow;
+            cursor: pointer;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .mainContainer{
+        .topContainer{
+            .topContainerTitle{
+                font-size: 3.5rem;
+            }
+        }
+        .bottomContainer{
+            .soporteBtn{
+                width: 60vw;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .mainContainer {
+            .topContainer{
+                .coverImg{
+                    width: 60vw;
+                }
+            }
+            .bottomContainer {
+                .soporteBtn {
+                    width: 45vw;
+                    .btnLogo{
+                        width: 4dvw;
+                    }
+                }
+            }
+        }
+    }
